@@ -236,6 +236,17 @@ section {
     cursor: pointer;
 }
 
+.icon:hover::after {
+    content: 'View Profile';
+    position: absolute;
+    bottom: -30px;
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
 
 /* Buttons */
 
@@ -500,6 +511,7 @@ section {
 /* Project Titles */
 .project-title {
     margin: 1rem auto;  /* Center align the title with margin */
+    margin-top: 1.5rem;
     color: black;
     font-size: 1.2rem;
     font-weight: bold;
@@ -699,4 +711,6 @@ footer {
   }
 
 
-  
+  html {
+    scroll-behavior: smooth;
+}
