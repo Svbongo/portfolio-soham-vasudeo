@@ -500,38 +500,50 @@ section {
     min-height: 500px; /* Ensuring uniform height for all cards */
 }
 
+/* Hover Effect - Pop-up Effect */
+.color-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
 /* Ensure images have the same size across all projects */
 .project-img {
     border-radius: 15px;
     width: 100%;
     height: 250px;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.project-img:hover {
+    transform: scale(1.05);
 }
 
 /* Project Titles */
 .project-title {
-    margin: 1rem auto;  /* Center align the title with margin */
+    margin: 1rem auto;
     margin-top: 1.5rem;
     color: black;
     font-size: 1.2rem;
     font-weight: bold;
-    text-align: center;  /* Center align the text */
-    line-height: 1.4; /* Improves readability */
-    max-width: 90%; /* Keeps text within bounds */
-    word-wrap: break-word; /* Ensures long words wrap correctly */
+    text-align: center;
+    line-height: 1.4;
+    max-width: 90%;
+    word-wrap: break-word;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 60px; /* Uniform height for all titles */
+    min-height: 60px;
 }
-
 
 /* Buttons Container - Ensure alignment across cards */
 .btn-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: auto; /* Align buttons at the bottom */
+    margin-top: auto;
 }
 
 /* Project Buttons */
@@ -544,7 +556,7 @@ section {
     cursor: pointer;
     background: none;
     transition: all 0.3s ease-in-out;
-    width: 130px; /* Set consistent button width */
+    width: 130px;
     text-align: center;
 }
 
@@ -636,6 +648,7 @@ section {
 }
 
 
+
 /* CONTACT */
 
 #contact {
@@ -714,3 +727,5 @@ footer {
   html {
     scroll-behavior: smooth;
 }
+
+

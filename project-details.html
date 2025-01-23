@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Info</title>
+    <link rel="stylesheet" href="project-style.css">
+</head>
+<body>
+    <header id="project-header">
+        <h1>Browse My Recent Projects</h1>
+        <a href="index.html#project" id="back-to-projects">← Back to Projects</a>
+    </header>
+
+    <!-- Project Carousel -->
+    <div id="project-carousel">
+        <div id="project1" class="project-item" onclick="loadProject(1)">
+            <img src="assets/project-1.png" alt="Automated Financial Data Processing">
+            <p>Automated Financial Data Processing</p>
+        </div>
+        <div id="project2" class="project-item" onclick="loadProject(2)">
+            <img src="assets/project-2.png" alt="Brain Alzheimer Detection">
+            <p>Brain Alzheimer Detection</p>
+        </div>
+        <div id="project3" class="project-item" onclick="loadProject(3)">
+            <img src="assets/project-3.png" alt="Hand Gesture Recognition">
+            <p>Hand Gesture Recognition</p>
+        </div>
+        <div id="project4" class="project-item" onclick="loadProject(4)">
+            <img src="assets/project-4.png" alt="Covid-19 Analysis">
+            <p>Covid-19 Analysis</p>
+        </div>
+        <div id="project5" class="project-item" onclick="loadProject(5)">
+            <img src="assets/project-5.png" alt="Sales Dashboard">
+            <p>Sales Dashboard</p>
+        </div>
+
+    </div>
+
+    <!-- Project Info Section -->
+    <div id="project-info">
+        <p>Select a project to see details here.</p>
+    </div>
+
+    <script>
+        // Function to retrieve project number from URL query parameters
+        function getProjectFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get("project");
+        }
+
+        // Function to update the URL when clicking on a project
+        function loadProject(projectNumber) {
+            history.pushState(null, '', `?project=${projectNumber}`);
+            showProjectInfo(projectNumber);
+        }
+
+        // Function to display project details dynamically
+        function showProjectInfo(projectNumber) {
+            let projectInfo = document.getElementById("project-info");
+
+            // Remove active class from all projects
+            let allProjects = document.querySelectorAll(".project-item");
+            allProjects.forEach(item => item.classList.remove("active"));
+
+            // Add active class to selected project
+            let selectedProject = document.getElementById(`project${projectNumber}`);
+            if (selectedProject) {
+                selectedProject.classList.add("active");
+            }
+
+            // Set project content dynamically
+            let projectDetails = {
+                1: `
+                    <h2>Automated Financial Data Processing</h2>
+                    <p>This project focuses on automating financial reports using AI-powered tools to enhance decision-making processes.</p>
+                    <img src="assets/project-1-details.png" alt="Project One Details" style="width:80%; border-radius:10px;">
+                `,
+                2: `
+                    <h2>Brain Alzheimer Detection</h2>
+                    <p>This project leverages machine learning algorithms to identify early symptoms of Alzheimer's disease.</p>
+                    <img src="assets/project-2-details.png" alt="Project Two Details" style="width:80%; border-radius:10px;">
+                `,
+                3: `
+                    <h2>Hand Gesture Recognition</h2>
+                    <p>An AI-based hand gesture recognition system that enables touchless interaction using computer vision techniques.</p>
+                    <img src="assets/project-3-details.png" alt="Project Three Details" style="width:80%; border-radius:10px;">
+                `,
+                4: `
+                    <h2>Covid-19 Analysis</h2>
+                    <p>This project provides an in-depth analysis of Covid-19 trends and patterns using data visualization.</p>
+                    <img src="assets/project-4-details.png" alt="Project Four Details" style="width:80%; border-radius:10px;">
+                `,
+                5: `
+                    <h2>Sales Dashboard</h2>
+                    <p>A dashboard to analyze and visualize sales performance over time for better decision-making.</p>
+                    <img src="assets/project-5-details.png" alt="Project Five Details" style="width:80%; border-radius:10px;">
+                `,
+                6: `
+                    <h2>Project Six</h2>
+                    <p>Details about the upcoming project which focuses on enhancing business insights.</p>
+                    <img src="assets/project-6-details.png" alt="Project Six Details" style="width:80%; border-radius:10px;">
+                `
+            };
+
+            // Update the info section based on the project number
+            projectInfo.innerHTML = projectDetails[projectNumber] || `<p>Project details not found.</p>`;
+        }
+
+        // Automatically show the selected project based on the URL query
+        window.onload = function () {
+            const selectedProject = getProjectFromURL();
+            if (selectedProject) {
+                showProjectInfo(selectedProject);
+            }
+        };
+    </script>
+</body>
+</html>
