@@ -205,31 +205,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    #desktop-nav {
-        padding: 1.5rem 3rem;
-    }
-    .profile__content {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    #desktop-nav {
-        padding: 1.5rem 2rem;
-        flex-direction: column;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    .profile__content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 
 /* About Section */
 #about {
@@ -304,29 +279,6 @@ body {
     border-radius: 15px;
     text-align: left;
     margin-left: 1rem; /* Move education section more to the right */
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .about-section-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .about__pic-container img {
-        width: 80%;
-    }
-
-    .education {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-section-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
 }
 
 
@@ -547,21 +499,6 @@ body {
 
 .next-btn {
     right: 10px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .carousel-container {
-        padding: 0 20px;
-    }
-
-    .color-container {
-        width: 100%;
-    }
-
-    .carousel-track {
-        flex-direction: column;
-    }
 }
 
 #contact {
