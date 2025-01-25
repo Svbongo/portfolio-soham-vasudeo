@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    padding: 1.5rem;
+    background-color: #333;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Project Showcase Section */
+#project-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.project-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.project {
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.project p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* Highlight selected project */
+.project.selected {
+    border: 2px solid #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.nav-arrow:hover {
+    color: #555;
+}
+
+/* Project Info Section */
+#project-info {
+    padding: 2rem;
+    background-color: white;
+}
+
+#info-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+#info-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
