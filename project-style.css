@@ -1,9 +1,10 @@
 /* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #f9f9f9;
+    color: #333;
     text-align: center;
 }
 
@@ -13,25 +14,47 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    border-bottom: 2px solid black;
+
 }
 
 #project-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin: 0;
+    color: #333;
 }
 
 #back-to-projects {
-    font-size: 1rem;
-    color: #007bff;
+    font-size: 1.2rem;
+    color: #080808;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 #back-to-projects:hover {
-    color: #0056b3;
+    color: #007bff;
+    border: 2px solid #007bff;
+    transition: all 0.1s ease;
+
+}
+
+/* Section Title Styling */
+.section__text__p1 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.Title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-top: 0;
 }
 
 /* Project Carousel Styling */
@@ -41,72 +64,134 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
     margin: 30px auto;
-    padding-bottom: 20px;
-    border-bottom: 2px solid black;
-    position: sticky;
-    top: 0;
+    padding-bottom: 40px;
+    position: relative;
     background: #fff;
     z-index: 10;
 }
 
 .project-item {
-    border: 2px solid #ccc;
+    border: 2px solid #ddd;
     border-radius: 15px;
-    padding: 10px;
+    padding: 20px;
     cursor: pointer;
-    background-color: #f9f9f9;
-    max-width: 200px;
+    background-color: #ffffff;
+    max-width: 220px;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .project-item img {
     width: 100%;
     border-radius: 10px;
-    height: 150px;
+    height: 160px;
     object-fit: cover;
 }
 
+.project-item p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #333;
+}
+
 .project-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
     border-color: #007bff;
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
 }
 
 /* Highlight active project */
 .project-item.active {
     border-color: #007bff;
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+    background: #ffffff;
 }
 
 /* Project Info Section */
 #project-info {
     margin-top: 50px;
-    padding: 40px;
-    background: #f4f4f4;
+    padding: 50px;
+    background: #ffffff;
     border-radius: 10px;
-    max-width: 900px;
+    max-width: 80%;
     min-height: 300px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
     margin-left: auto;
     margin-right: auto;
+    border-left: 5px solid #ff3700;
+}
+
+#project-info h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 15px;
 }
 
 #project-info p {
     font-size: 1.2rem;
-    color: #555;
+    background: #ffffff;
+    line-height: 1.8;
+}
+
+#project-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Stylish List Styling */
+#project-info ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+
+}
+
+#project-info ul li {
+    position: relative;
+    padding-left: 45px; /* More space to prevent overlap */
+    margin: 15px 0;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    display: flex;
+    left: 20px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#project-info ul li::before {
+    content: '✔';  /* Custom checkmark icon */
+    position: absolute;
+    right: 1200px;  /* Proper alignment to avoid overlap */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Improved hover effect */
+#project-info ul li:hover {
+    background: #eef5ff;
+}
+
+/* Icon adjustments for better alignment */
+#project-info ul li i {
+    margin-right: 150px; /* Space between icon and text */
+    color: #007bff;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #project-header {
         flex-direction: column;
-        text-align: center;
         padding: 20px;
+        text-align: center;
     }
 
     #project-title {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
 
     #project-carousel {
@@ -117,4 +202,40 @@ body {
     .project-item {
         max-width: 80%;
     }
+
+    #project-info {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Title {
+        font-size: 2rem;
+    }
+
+    .project-item {
+        max-width: 90%;
+    }
+
+    #project-info {
+        padding: 20px;
+    }
+}
+
+
+
+.section__text__p1 {
+    font-size: 1rem;  /* Adjusts text size */
+    font-weight: 400; /* Adjusts text weight */
+    color: #666;      /* Adjusts text color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.Title {
+    font-size: 2.5rem;  /* Size of "About Me" */
+    font-weight: 700;   /* Bold font weight */
+    color: #000;        /* Black color */
+    text-align: center;
+    margin-top: 0.5rem;
 }
