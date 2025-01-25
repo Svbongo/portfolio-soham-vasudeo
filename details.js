@@ -27,10 +27,55 @@ function showProjectInfo(projectNumber) {
     // Set project content dynamically
     let projectDetails = {
         1: `
-            <h2>Automated Financial Data Processing</h2>
-            <p>This project focuses on automating financial reports using AI-powered tools to enhance decision-making processes.</p>
-            <img src="assets/project-1-details.png" alt="Project One Details" style="width:80%; border-radius:10px;">
-        `,
+        <h2>Transforming Financial Planning and Analysis with Generative AI</h2>
+        <p>
+            This project leverages Generative AI and Robotic Process Automation (RPA) to revolutionize financial planning and analysis (FP&A),
+            automating forecasting, anomaly detection, and financial reporting to enhance decision-making and operational efficiency.
+        </p>
+        
+        <div style="text-align: center;">
+            <img src="assets/project-1-details.png" alt="FP&A Dashboard Overview" style="width:80%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        </div>
+    
+        <h3>📊 Overview</h3>
+        <p>
+            Conducted as part of a conceptual project at NMIMS, this initiative focuses on automating the FP&A process by integrating 
+            advanced technologies such as RPA and Generative AI to streamline financial data collection, forecasting, and reporting.
+        </p>
+    
+        <h3>🔍 Key Features</h3>
+        <ul>
+            <li>Automated financial data collection from multiple sources using RPA.</li>
+            <li>Time-series forecasting using advanced machine learning models (LSTM, SARIMA).</li>
+            <li>Anomaly detection to identify irregularities in financial statements.</li>
+            <li>Dynamic "what-if" scenario analysis powered by Generative AI models.</li>
+            <li>Interactive dashboards for real-time insights into financial health.</li>
+        </ul>
+    
+        <h3>📈 Metrics Analyzed</h3>
+        <ul>
+            <li><strong>Cost Reduction:</strong> Achieved through automated financial reporting.</li>
+            <li><strong>Forecast Accuracy:</strong> Improved by 15% using AI-based predictions.</li>
+            <li><strong>Operational Efficiency:</strong> Enhanced by automating repetitive tasks.</li>
+            <li><strong>Data Processing Time:</strong> Reduced from weeks to hours.</li>
+        </ul>
+    
+        <h3>🛠 Tools & Technologies Used</h3>
+        <ul>
+            <li><strong>Python:</strong> Data processing and AI model implementation.</li>
+            <li><strong>Power BI:</strong> Interactive dashboards for financial visualization.</li>
+            <li><strong>RPA Tools:</strong> UiPath and Power Automate for data extraction.</li>
+            <li><strong>Cloud Platforms:</strong> AWS and Azure for data storage and processing.</li>
+            <li><strong>Generative AI:</strong> OpenAI API and LangChain for scenario analysis.</li>
+        </ul>
+    
+        <h3>🏆 Achievements</h3>
+        <p>
+            Successfully implemented an AI-driven FP&A solution that automates financial reporting and forecasting, 
+            reducing manual effort and enhancing business decision-making.
+        </p>
+    `,
+    
         2: `
             <h2>Brain Alzheimer Detection</h2>
             <p>This project leverages machine learning algorithms to identify early symptoms of Alzheimer's disease.</p>
@@ -137,3 +182,31 @@ window.onload = function () {
         showProjectInfo(selectedProject);
     }
 };
+
+
+// Scroll function to update progress
+// Scroll function to update progress
+window.onscroll = function() { updateScrollProgress() };
+
+function updateScrollProgress() {
+    const scrollProgress = document.getElementById("scrollProgress");
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollPercentage = (scrollTop / scrollHeight) * 100;
+    let degree = (scrollPercentage / 100) * 360;
+
+    // Update the circular progress bar dynamically
+    scrollProgress.style.background = `conic-gradient(
+        #ff5733 ${degree}deg, 
+        #d3d3d3 ${degree}deg
+    )`;
+
+    // Show or hide the button based on scroll position
+    document.getElementById("scrollTopContainer").style.display = scrollTop > 100 ? "flex" : "none";
+}
+
+// Smooth scrolling to top
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+

@@ -167,3 +167,26 @@ function showProjectInfo(projectNumber) {
     projectInfo.innerHTML = projectDetails[projectNumber];
 }
 
+window.onscroll = function() { updatescrollprogress() };
+
+function updatescrollprogress() {
+    const scrollprogress = document.getElementById("scrollprogress");
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollPercentage = (scrollTop / scrollHeight) * 100;
+    let degree = (scrollPercentage / 100) * 360;
+
+    // Update the circular progress bar dynamically
+    scrollprogress.style.background = `conic-gradient(
+        #ff5733 ${degree}deg, 
+        #d3d3d3 ${degree}deg
+    )`;
+
+    // Show or hide the button based on scroll position
+    document.getElementById("scrolltopcontainer").style.display = scrollTop > 100 ? "flex" : "none";
+}
+
+// Smooth scrolling to top
+function scrollTotop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
