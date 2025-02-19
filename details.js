@@ -78,13 +78,120 @@ function showProjectInfo(projectNumber) {
     
         2: `
             <h2>Brain Alzheimer Detection</h2>
-            <p>This project leverages machine learning algorithms to identify early symptoms of Alzheimer's disease.</p>
+            <p>Developed a real-time Hand Gesture Recognition System using MediaPipe, OpenCV, and LSTM Neural Networks, enabling accurate classification of sign language gestures for improved human-computer interaction and accessibility for the hearing and speech impaired.</p>
             <img src="assets/project-2-details.png" alt="Project Two Details" style="width:80%; border-radius:10px;">
         `,
         3: `
-            <h2>Hand Gesture Recognition</h2>
-            <p>An AI-based hand gesture recognition system that enables touchless interaction using computer vision techniques.</p>
-            <img src="assets/project-3-details.png" alt="Project Three Details" style="width:80%; border-radius:10px;">
+        <h2>📊 Hand Gesture Recognition System</h2>
+    <p>
+        This project focuses on developing a real-time gesture-based communication system using MediaPipe, OpenCV, and LSTM Neural Networks.
+        The system enhances human-computer interaction by accurately recognizing hand gestures, particularly benefiting speech-impaired individuals.
+        By leveraging AI-driven methodologies, the project facilitates gesture-to-text translation, improving accessibility and real-time communication.
+    </p>
+
+    <h3>👥 Team Members</h3>
+    <ul>
+        <li>Soham Vasudeo</li>
+        <li>Om Agrawal</li>
+        <li>Vanshaj Ajmera</li>
+        <li>Shardul Patki</li>
+        <li>Ritika Shetty</li>
+    </ul>
+    <p><strong>Course:</strong> Machine Learning Project 2022-23 | <strong>Institution:</strong> NMIMS University</p>
+
+    <h3>🎯 Objectives</h3>
+    <ul>
+        <li>✔ Enable gesture-based communication for speech-impaired individuals.</li>
+        <li>✔ Implement a real-time detection system with high accuracy and low latency.</li>
+        <li>✔ Develop a scalable and adaptable model to recognize additional gestures.</li>
+        <li>✔ Enhance human-computer interaction through gesture-controlled systems.</li>
+    </ul>
+
+    <h3>🗂 Data Understanding</h3>
+    <p>The project leverages gesture-based image data to train and optimize the model for accurate recognition.</p>
+
+    <h4>📌 Dataset Components:</h4>
+    <ul>
+        <li>Hand Gesture Images: Captured using **MediaPipe Hands** for training.</li>
+        <li>Keypoints Extraction: **21 hand landmarks** recorded for precise motion tracking.</li>
+        <li>Predefined Gestures Recognized:
+            <ul>
+                <li>🖐 Hello</li>
+                <li>🤟 I Love You</li>
+                <li>✋ Thank You</li>
+                <li>☝ One</li>
+                <li>✌ Victory</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>🚧 Challenges Addressed:</h4>
+    <ul>
+        <li>Variations in Lighting & Backgrounds – Improved model robustness.</li>
+        <li>Real-Time Processing Constraints – Optimized inference time.</li>
+        <li>Multi-Gesture Recognition – Supports dynamic learning of new gestures.</li>
+    </ul>
+
+    <h3>⚙️ Data Preparation</h3>
+    <ul>
+        <li>🔹 Removed noisy and distorted images.</li>
+        <li>🔹 Standardized gesture images to a **consistent resolution**.</li>
+        <li>🔹 Applied **image augmentation** (rotation, scaling) for better generalization.</li>
+    </ul>
+
+    <h3>🧠 Modeling</h3>
+    <ul>
+        <li>✅ **MediaPipe Hands:** Detects **21 keypoints** for each hand.</li>
+        <li>✅ **OpenCV Preprocessing:** Converts images into feature arrays.</li>
+    </ul>
+    <h4>🤖 Deep Learning Models for Gesture Classification:</h4>
+    <ul>
+        <li>🤖 LSTM (Long Short-Term Memory): Captures sequential dependencies.</li>
+        <li>🤖 CNN (Convolutional Neural Networks): Extracts spatial patterns.</li>
+        <li>🤖 ANN (Artificial Neural Networks): Classifies gesture patterns efficiently.</li>
+    </ul>
+
+    <h3>📈 Model Evaluation</h3>
+    <ul>
+        <li>📌 **Accuracy:** 87.5% on the test dataset.</li>
+        <li>📌 **Precision & Recall:** Ensures minimal false positives.</li>
+        <li>📌 **F1-Score:** Balances precision and recall.</li>
+        <li>⏳ **Processing Time:** ~3.81 ms per frame (real-time execution).</li>
+    </ul>
+
+    <h3>🚀 Deployment Strategy</h3>
+    <ul>
+        <li>☁ Supports **Raspberry Pi, AWS, Google Cloud**.</li>
+        <li>🔄 **Automated Data Collection & Preprocessing** for scalability.</li>
+        <li>✅ **Flask API / FastAPI:** Enables real-time communication.</li>
+        <li>✅ **TFLite for Mobile Deployment:** Optimized for mobile devices.</li>
+        <li>📊 **Feedback Loop:** Allows users to **add new gestures dynamically**.</li>
+    </ul>
+
+    <h3>📊 Key Insights and Results</h3>
+    <ul>
+        <li>📌 **High Recognition Accuracy:** 96.4% accuracy on test data.</li>
+        <li>📌 **Fast Processing Speed:** Real-time recognition at **~3.81 ms per frame**.</li>
+        <li>📌 **User-Friendly Interface:** Gesture-to-text translation for assistive communication.</li>
+        <li>📌 **Expandable Gesture Set:** New gestures can be **added dynamically**.</li>
+    </ul>
+
+    <h3>🛠 Tools & Technologies Used</h3>
+    <ul>
+        <li>🖥 **Python, NumPy, OpenCV, TensorFlow, Keras**</li>
+        <li>🧠 **LSTM, CNN, ANN**</li>
+        <li>🖐 **MediaPipe Hands, OpenCV**</li>
+        <li>📊 **Matplotlib, Seaborn, Power BI**</li>
+        <li>🌍 **Flask, FastAPI, TensorFlow Lite (TFLite)**</li>
+    </ul>
+
+    <h3>🏆 Achievements</h3>
+    <ul>
+        <li>🏅 Developed a fully functional **real-time gesture recognition system**.</li>
+        <li>🏅 Achieved **96.4% accuracy** using deep learning models.</li>
+        <li>🏅 Successfully integrated **MediaPipe** for **precise hand tracking**.</li>
+        <li>🏅 Enabled **real-time gesture classification** for assistive communication.</li>
+    </ul>
         `,
         4: `
         <h2>Covid-19 Analysis and Forecasting</h2>
