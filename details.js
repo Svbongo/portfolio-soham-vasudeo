@@ -75,8 +75,57 @@ function showProjectInfo(projectNumber) {
             reducing manual effort and enhancing business decision-making.
         </p>
     `,
-    
         2: `
+        <h2>Transforming Financial Planning and Analysis with Generative AI</h2>
+        <p>
+            This project leverages Generative AI and Robotic Process Automation (RPA) to revolutionize financial planning and analysis (FP&A),
+            automating forecasting, anomaly detection, and financial reporting to enhance decision-making and operational efficiency.
+        </p>
+        
+        <div style="text-align: center;">
+            <img src="assets/project-1-details.png" alt="FP&A Dashboard Overview" style="width:80%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        </div>
+    
+        <h3>📊 Overview</h3>
+        <p>
+            Conducted as part of a conceptual project at NMIMS, this initiative focuses on automating the FP&A process by integrating 
+            advanced technologies such as RPA and Generative AI to streamline financial data collection, forecasting, and reporting.
+        </p>
+    
+        <h3>🔍 Key Features</h3>
+        <ul>
+            <li>Automated financial data collection from multiple sources using RPA.</li>
+            <li>Time-series forecasting using advanced machine learning models (LSTM, SARIMA).</li>
+            <li>Anomaly detection to identify irregularities in financial statements.</li>
+            <li>Dynamic "what-if" scenario analysis powered by Generative AI models.</li>
+            <li>Interactive dashboards for real-time insights into financial health.</li>
+        </ul>
+    
+        <h3>📈 Metrics Analyzed</h3>
+        <ul>
+            <li><strong>Cost Reduction:</strong> Achieved through automated financial reporting.</li>
+            <li><strong>Forecast Accuracy:</strong> Improved by 15% using AI-based predictions.</li>
+            <li><strong>Operational Efficiency:</strong> Enhanced by automating repetitive tasks.</li>
+            <li><strong>Data Processing Time:</strong> Reduced from weeks to hours.</li>
+        </ul>
+    
+        <h3>🛠 Tools & Technologies Used</h3>
+        <ul>
+            <li><strong>Python:</strong> Data processing and AI model implementation.</li>
+            <li><strong>Power BI:</strong> Interactive dashboards for financial visualization.</li>
+            <li><strong>RPA Tools:</strong> UiPath and Power Automate for data extraction.</li>
+            <li><strong>Cloud Platforms:</strong> AWS and Azure for data storage and processing.</li>
+            <li><strong>Generative AI:</strong> OpenAI API and LangChain for scenario analysis.</li>
+        </ul>
+    
+        <h3>🏆 Achievements</h3>
+        <p>
+            Successfully implemented an AI-driven FP&A solution that automates financial reporting and forecasting, 
+            reducing manual effort and enhancing business decision-making.
+        </p>
+    `,
+    
+        3: `
      <h2>🧠 Detection and Classification of Brain Alzheimer’s Using CNN Model</h2>
     <p>
         This project applies <strong>Convolutional Neural Networks (CNNs)</strong> to detect and classify 
@@ -176,7 +225,7 @@ function showProjectInfo(projectNumber) {
         <li> Integrated <strong>SMOTE for class balancing</strong>, improving reliability.</li>
     </ul>
         `,
-        3: `
+        4: `
       <h2>📊 Hand Gesture Recognition System</h2>
     <p>
         This project focuses on developing a real-time <strong>gesture-based communication system</strong> using 
@@ -273,7 +322,7 @@ function showProjectInfo(projectNumber) {
         <li> <strong>Expandable Gesture Set:</strong> New gestures can be <strong>added dynamically</strong>.</li>
     </ul
         `,
-        4: `
+        5: `
         <h2>Covid-19 Analysis and Forecasting</h2>
         <p>An in-depth analysis of COVID-19 trends, vaccination patterns, and forecasting using data visualization and predictive modeling techniques.</p>
         
@@ -323,7 +372,7 @@ function showProjectInfo(projectNumber) {
         </p>
     `,
     
-        5: `
+        6: `
             <h2>Sales Dashboard</h2>
             <img src="assets/project-5-details.png" alt="Sales Dashboard" style="width:50%; border-radius:10px;">
             <h3>📊 Overview</h3>
