@@ -149,23 +149,17 @@ body {
 }
 
 #project-info ul li {
-    position: relative;
-    padding-left: 45px; /* More space to prevent overlap */
-    margin: 15px 0;
-    font-size: 1.1rem;
-    padding: 15px 20px;
     display: flex;
-    left: 20px;
     align-items: center;
+    font-size: 1.1rem;
+    margin: 15px 0;
+    padding: 15px 20px;
     transition: all 0.3s ease-in-out;
 }
 
 #project-info ul li::before {
-    content: '✔';  /* Custom checkmark icon */
-    position: absolute;
-    right: 1200px;  /* Proper alignment to avoid overlap */
-    top: 50%;
-    transform: translateY(-50%);
+    content: '✔';
+    margin-right: 10px;  /* Adjust space between icon and text */
     font-size: 1.3rem;
     color: #007bff;
     font-weight: bold;
@@ -181,48 +175,6 @@ body {
     margin-right: 150px; /* Space between icon and text */
     color: #007bff;
 }
-
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
-    #project-header {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
-    #project-title {
-        font-size: 2.2rem;
-    }
-
-    #project-carousel {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .project-item {
-        max-width: 80%;
-    }
-
-    #project-info {
-        padding: 30px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .Title {
-        font-size: 2rem;
-    }
-
-    .project-item {
-        max-width: 90%;
-    }
-
-    #project-info {
-        padding: 20px;
-    }
-}
-
-
 
 .section__text__p1 {
     font-size: 1rem;  /* Adjusts text size */
@@ -283,14 +235,100 @@ body {
     transform: scale(1.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #scrollTopContainer {
-        width: 60px;
-        height: 60px;
-    }
 
-    #scrollTopContainer .arrow {
-        font-size: 20px;
+@media screen and (max-width: 768px) {
+    /* Header adjustments */
+    #project-header {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
     }
-}
+  
+    #project-title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+  
+    #back-to-projects {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+  
+    /* Project carousel responsiveness */
+    #project-carousel {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .project-item {
+      max-width: 90%;
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .project-item img {
+      height: auto;
+      object-fit: contain;
+    }
+  
+    /* Main project section */
+    #project-info {
+      padding: 20px;
+      max-width: 95%;
+      font-size: 1rem;
+    }
+  
+    #project-info h2 {
+      font-size: 1.5rem;
+    }
+  
+    #project-info p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  
+    #project-info h3 {
+      font-size: 1.25rem;
+    }
+  
+    #project-info ul li {
+      font-size: 0.95rem;
+      padding: 10px 15px;
+      margin: 10px 0;
+      left: 0;
+    }
+  
+    #project-info ul li::before {
+      right: auto;
+      left: 0;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+    }
+  
+    /* Image responsiveness inside project-info */
+    #project-info img {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-bottom: 20px;
+    }
+  
+    /* Adjust project title block */
+    .Title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    /* Scroll to top button */
+    #scrollTopContainer {
+      width: 50px;
+      height: 50px;
+      bottom: 20px;
+      right: 20px;
+    }
+  
+    #scrollTopContainer .arrow {
+      font-size: 22px;
+    }
+  }
+  

@@ -27,53 +27,62 @@ function showProjectInfo(projectNumber) {
     // Set project content dynamically
     let projectDetails = {
         1: `
-        <h2>Transforming Financial Planning and Analysis with Generative AI</h2>
+        <h2>Socioeconomic Restructuring in Mid-1990s America</h2>
         <p>
-            This project leverages Generative AI and Robotic Process Automation (RPA) to revolutionize financial planning and analysis (FP&A),
-            automating forecasting, anomaly detection, and financial reporting to enhance decision-making and operational efficiency.
+            This capstone project analyzes U.S. Census data from 1994–1995 to uncover 
+            how post-recession recovery, NAFTA, and demographic shifts reshaped American labor, 
+            mobility, income, and family structures.
         </p>
         
-        <div style="text-align: center;">
-            <img src="assets/project-1-details.png" alt="FP&A Dashboard Overview" style="width:80%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <img src="assets/project-1-details-1.png" alt="Census Dashboard Overview" style="width:48%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="assets/project-1-details-2.png" alt="Census Dashboard Overview" style="width:48%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="assets/project-1-details-3.png" alt="Census Dashboard Overview" style="width:48%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="assets/project-1-details-4.png" alt="Census Dashboard Overview" style="width:48%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="assets/project-1-details-5.png" alt="Census Dashboard Overview" style="width:48%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="assets/project-1-details-6.png" alt="Census Dashboard Overview" style="width:48%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         </div>
+
     
         <h3>📊 Overview</h3>
         <p>
-            Conducted as part of a conceptual project at NMIMS, this initiative focuses on automating the FP&A process by integrating 
-            advanced technologies such as RPA and Generative AI to streamline financial data collection, forecasting, and reporting.
+            Using a combination of dashboard visualizations and predictive 
+            modeling, the study explores workforce composition, income inequality, 
+            family and education dynamics, and migration trends across the mid-90s. 
+            The project also uses logistic regression to predict migration likelihood.
         </p>
     
-        <h3>🔍 Key Features</h3>
-        <ul>
-            <li>Automated financial data collection from multiple sources using RPA.</li>
-            <li>Time-series forecasting using advanced machine learning models (LSTM, SARIMA).</li>
-            <li>Anomaly detection to identify irregularities in financial statements.</li>
-            <li>Dynamic "what-if" scenario analysis powered by Generative AI models.</li>
-            <li>Interactive dashboards for real-time insights into financial health.</li>
-        </ul>
-    
-        <h3>📈 Metrics Analyzed</h3>
-        <ul>
-            <li><strong>Cost Reduction:</strong> Achieved through automated financial reporting.</li>
-            <li><strong>Forecast Accuracy:</strong> Improved by 15% using AI-based predictions.</li>
-            <li><strong>Operational Efficiency:</strong> Enhanced by automating repetitive tasks.</li>
-            <li><strong>Data Processing Time:</strong> Reduced from weeks to hours.</li>
-        </ul>
-    
-        <h3>🛠 Tools & Technologies Used</h3>
-        <ul>
-            <li><strong>Python:</strong> Data processing and AI model implementation.</li>
-            <li><strong>Power BI:</strong> Interactive dashboards for financial visualization.</li>
-            <li><strong>RPA Tools:</strong> UiPath and Power Automate for data extraction.</li>
-            <li><strong>Cloud Platforms:</strong> AWS and Azure for data storage and processing.</li>
-            <li><strong>Generative AI:</strong> OpenAI API and LangChain for scenario analysis.</li>
-        </ul>
-    
-        <h3>🏆 Achievements</h3>
-        <p>
-            Successfully implemented an AI-driven FP&A solution that automates financial reporting and forecasting, 
-            reducing manual effort and enhancing business decision-making.
-        </p>
+    <h3>🔍 Key Features</h3>
+<ul>
+    <li>Interactive dashboard built using Power BI to explore mid-1990s U.S. Census data.</li>
+    <li>Exploratory analysis of shifts in employment, education, family structure, income, and migration behavior.</li>
+    <li>Logistic regression modeling to predict migration likelihood based on socioeconomic features.</li>
+    <li>Visual storytelling of economic realignment post-NAFTA and early ’90s recession.</li>
+    <li>Demographic filters enable dynamic insights by gender, race, citizenship, and education level.</li>
+</ul>
+
+<h3>📈 Metrics Analyzed</h3>
+<ul>
+    <li><strong>Full-Time Employment Rate:</strong> Tracked across major occupations and industries.</li>
+    <li><strong>High-Income Proportion:</strong> Assessed by education, race, gender, and migration patterns.</li>
+    <li><strong>Weighted Wage:</strong> Calculated using instance-weighted averages to reveal income disparity.</li>
+    <li><strong>Migration Likelihood:</strong> Predicted with 100% model accuracy using age and household factors.</li>
+</ul>
+
+<h3>🛠 Tools & Technologies Used</h3>
+<ul>
+    <li><strong>Power BI:</strong> Developed interactive dashboards for socioeconomic visualization.</li>
+    <li><strong>Python:</strong> Used for data wrangling, regression modeling, and advanced statistical analysis.</li>
+    <li><strong>Seaborn & Matplotlib:</strong> Employed for polished and annotated EDA visuals.</li>
+    <li><strong>Scikit-learn:</strong> Used to train logistic regression models for migration prediction.</li>
+</ul>
+
+<h3>🏆 Achievements</h3>
+<p>
+    Built a data-driven narrative uncovering how demographic and economic forces shaped American life between 1994–1995. 
+    Provided actionable insights into labor shifts, income inequality, and regional migration—empowering better policy, planning, and workforce development.
+</p>
+
     `,
         2: `
         <h2>Transforming Financial Planning and Analysis with Generative AI</h2>
@@ -83,7 +92,7 @@ function showProjectInfo(projectNumber) {
         </p>
         
         <div style="text-align: center;">
-            <img src="assets/project-1-details.png" alt="FP&A Dashboard Overview" style="width:80%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <img src="assets/project-2-details.png" alt="FP&A Dashboard Overview" style="width:80%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         </div>
     
         <h3>📊 Overview</h3>
@@ -374,7 +383,7 @@ function showProjectInfo(projectNumber) {
     
         6: `
             <h2>Sales Dashboard</h2>
-            <img src="assets/project-5-details.png" alt="Sales Dashboard" style="width:50%; border-radius:10px;">
+            <img src="assets/project-6-details.png" alt="Sales Dashboard" style="width:50%; border-radius:10px;">
             <h3>📊 Overview</h3>
             <p>This interactive dashboard was created during a competition as part of my Bachelor's in Computer Science (Data Science) at NMIMS, Mumbai.</p>
 
