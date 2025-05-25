@@ -255,21 +255,33 @@ body {
       margin-top: 10px;
     }
   
-    /* Project carousel responsiveness */
+    /* Carousel becomes horizontally scrollable on mobile */
     #project-carousel {
-      flex-direction: column;
-      gap: 1.5rem;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 16px;
+      padding: 10px 10px 20px;
     }
   
     .project-item {
+      flex: 0 0 45%; /* Show 2 items per viewport */
+      scroll-snap-align: start;
       max-width: 90%;
-      width: 100%;
+      min-width: 160px;
       padding: 15px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
   
     .project-item img {
+      width: 100%;
       height: auto;
-      object-fit: contain;
+      object-fit: cover;
+      border-radius: 10px;
     }
   
     /* Main project section */
@@ -296,24 +308,20 @@ body {
       font-size: 0.95rem;
       padding: 10px 15px;
       margin: 10px 0;
-      left: 0;
     }
   
     #project-info ul li::before {
-      right: auto;
       left: 0;
       transform: translateY(-50%);
       font-size: 1.1rem;
     }
   
-    /* Image responsiveness inside project-info */
     #project-info img {
       width: 100% !important;
       max-width: 100% !important;
       margin-bottom: 20px;
     }
   
-    /* Adjust project title block */
     .Title {
       font-size: 2rem;
       text-align: center;
