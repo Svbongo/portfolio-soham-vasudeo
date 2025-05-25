@@ -191,3 +191,7 @@ function scrollTotop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("open");
+}
