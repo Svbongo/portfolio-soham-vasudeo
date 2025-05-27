@@ -34,8 +34,12 @@ a,
     justify-content: space-between;
     align-items: center;
 }
+/* Hamburger */
 .hamburger {
     display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ff5400;
   }
 .mobile-welcome-text {
     display: none;
@@ -53,7 +57,7 @@ a,
     font-weight: 700;
     white-space: nowrap;
     animation: fadeInLeftOut 5s ease-in-out infinite;
-}
+  }
 
 .nav-links {
     list-style: none;
@@ -106,22 +110,6 @@ a,
 .dropdown a:hover {
     color: #ff5400;
 }
-
-@keyframes fadeInLeftOut {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    40%, 60% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-}
-
 
 /* Profile Section */
 #profile {
@@ -679,16 +667,28 @@ a,
         flex-direction: column;
         align-items: flex-start;
         padding: 1rem 2rem;
-        gap: 1rem;
       }
-
-      .hamburger {
+    
+      .nav-welcome-text {
+        display: none;
+      }
+    
+      .mobile-welcome-text {
         display: block;
-        font-size: 2rem;
-        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #ff5400;
+        animation: fadeInLeftOut 5s ease-in-out infinite;
+        text-align: center;
+        width: 100%;
+        margin: 1rem 0;
+      }
+    
+      .hamburger {
+        display: flex;
         margin-left: auto;
       }
-
+    
       .nav-links {
         display: none;
         flex-direction: column;
@@ -696,7 +696,7 @@ a,
         gap: 1rem;
         margin-top: 1rem;
       }
-
+    
       .nav-links.open {
         display: flex;
       }
@@ -707,21 +707,13 @@ a,
     
       .dropdown {
         position: static;
-        background: transparent;
         box-shadow: none;
+        background: transparent;
         padding-left: 1rem;
       }
-    
-      .nav-welcome-text {
-        display: none;
-      }
     }
-    .mobile-welcome-text {
-        font-size: 2rem;
-        font-weight: 700;
-        white-space: nowrap;
-        animation: fadeInLeftOut 5s ease-in-out infinite;
-      }
+    
+      
       .profile__content {
         flex-direction: column;
         gap: 2rem;
@@ -805,3 +797,20 @@ a,
         gap: 1rem;
       }
                                         
+
+
+
+      @keyframes fadeInLeftOut {
+        0% {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        40%, 60% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+      }

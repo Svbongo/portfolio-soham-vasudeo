@@ -192,6 +192,7 @@ function scrollTotop() {
 }
 
 function toggleMobileMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("open");
-}
+    const menu = document.querySelector('.nav-links');
+    menu.classList.toggle('open');
+  }
+  
